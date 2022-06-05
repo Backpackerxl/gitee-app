@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import Search from '../views/Search.vue';
-import Notifications from '../views/Notifications.vue';
+import Home from '../views/Home';
+import Search from '../views/Search';
+import Notifications from '../views/Notifications';
+import UserInfo from '../views/UserInfo';
 
 
 const routes = [
@@ -19,6 +20,11 @@ const routes = [
     path: '/notifications',
     name: 'Notifications',
     component: Notifications
+  },
+  {
+    path: '/userinfo',
+    name: 'UserInfo',
+    component: UserInfo
   }
 ]
 

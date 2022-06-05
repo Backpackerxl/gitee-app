@@ -1,8 +1,8 @@
 <template>
-    <div :style="border" class="ripple-example-block var-elevation--2" v-ripple>
+    <var-button :style="border" class="me-bottom-btn" text color="transparent" text-color="#fff">
         <var-icon :name='newname.name' :size="24" />
         <p>{{ label }}</p>
-    </div>
+    </var-button>
 </template>
 
 <script setup>
@@ -44,7 +44,7 @@ watch(() => router.currentRoute.value.path, (toPath) => {
 </script>
 
 <style lang="less" scoped>
-.ripple-example-block {
+.me-bottom-btn {
     width: 120px;
     height: 120px;
     text-align: center;
@@ -55,19 +55,19 @@ watch(() => router.currentRoute.value.path, (toPath) => {
         position: absolute;
         bottom: 50%;
         left: 50%;
-        transform: translate(-50%, calc(-50% + 15px));
-        color: #777;
+        transform: translate(-50%, calc(-50% + 20px));
+        color: #888;
         transition: all .3s;
     }
 
     p {
         line-height: 0;
         font-size: 12px;
-        color: #777;
+        color: #888;
         position: absolute;
         bottom: 50%;
         left: 50%;
-        transform: translate(-50%, calc(-50% + 25px));
+        transform: translate(-50%, calc(-50% + 15px));
     }
 }
 </style>

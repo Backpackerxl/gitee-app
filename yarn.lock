@@ -984,6 +984,11 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@jamescoyle/vue-icon@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@jamescoyle/vue-icon/-/vue-icon-0.1.2.tgz#b9e254187de6716b81bf9e0e8400ec012231bd05"
+  integrity sha512-KFrImXx5TKIi6iQXlnyLEBl4rNosNKbTeRnr70ucTdUaciVmd9qK9d/pZAaKt1Ob/8xNnX2GMp8LisyHdKtEgw==
+
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
   resolved "https://registry.npmmirror.com/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz#e5d2e450306a9491e3bd77e323e38d7aff315996"
@@ -1023,6 +1028,11 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@mdi/js@^6.7.96":
+  version "6.7.96"
+  resolved "https://registry.yarnpkg.com/@mdi/js/-/js-6.7.96.tgz#6cd13ba64eeaf347c857feb3c328d31af3e75876"
+  integrity sha512-vZvhFrNN9LQx+Awu3nU6ESfXXDpRA/CA4mwikzU5g8uf9NpAocK43ecQvVNntwiXlLKpyplas8d4lsfpqjtXLA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
