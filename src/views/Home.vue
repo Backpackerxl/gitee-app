@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TopBar 
+    :avater="avater.name"
+    title="首页"
+    icon="plus-circle-outline"
+    />
+    <div>
+      dk are you ok
+    </div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script setup>
+import { reactive } from 'vue';
+import TopBar from '../components/TopBar.vue';
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+const avater = reactive({
+  name: '../assets/favicon.ico'
+});
+
+// https://portrait.gitee.com/uploads/avatars/user/2783/8349130_backpackerxl_1638198263.png
+
 </script>

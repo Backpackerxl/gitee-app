@@ -1,29 +1,59 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="me-bottom-bar">
+    <router-link v-for="(item, index) in barArray" :key="index" :to="item.goto">
+      <MyButton :data="item" />
+    </router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup>
 
-#nav {
-  padding: 30px;
+import MyButton from './components/MyButton.vue';
+
+const barArray = [
+  {
+    goto: '/',
+    label: '首页',
+    name: ['home-outline', 'home'],
+    setBorder: [0, 60, 60, 0]
+  },
+  {
+    goto: '/notifications',
+    label: '通知',
+    name: ['bell-outline', 'bell'],
+    setBorder: [60]
+  },
+  {
+    goto: '/search',
+    label: '搜索',
+    name: ['magnify', 'magnify'],
+    setBorder: [60, 0, 0, 60]
+  }
+];
+
+</script>
+
+<style lang="less">
+.me-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgb(0, 0, 0, .1);
 
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    text-decoration: none;
+    color: #444;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    &.router-link-active p,
+    &.router-link-active i {
+      color: #00b5ad;
     }
   }
 }
